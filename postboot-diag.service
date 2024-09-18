@@ -1,0 +1,11 @@
+[Unit]
+Description=Post-boot diagnostic output for use at instance console
+After=
+
+[Service]
+Type=simple
+User=ubuntu
+ExecStart=/usr/local/bin/postboot-diag.sh
+
+[Install]
+WantedBy=getty.target
